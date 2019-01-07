@@ -1,20 +1,32 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import BananaImage from './components/BananaImage'
 import Greeting from './components/Greeting'
 import Blink from './components/Blink'
 import PizzaTranslator from './components/PizzaTranslator'
+import ButtonBasics from './components/ButtonBasics'
+import Scroll from './components/Scroll'
+import FlatListBasics from './components/FlatListBasics'
+import FlexDimensionsBasics from './components/FlexDimensionsBasics'
+import SectionListBasics from './components/SectionListBasics'
+import FetchExample from './components/FetchExample' 
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <PizzaTranslator />
+      <ScrollView>
         <Text>Hello World!</Text>
+        <PizzaTranslator />
+        <FetchExample />
         <BananaImage />
         <Greeting />
-        <Blink />
+        {/* <Blink /> */}
         <Text>I MADE IT WORK!</Text>
+        <ButtonBasics />
+        <FlatListBasics />
+        <SectionListBasics />
+      </ScrollView>
       </View>
     )
   }
@@ -26,6 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'limegreen',
     alignItems: 'center',
     justifyContent: 'center',
+    top: 30
   },
   words: {
     color: 'white', 

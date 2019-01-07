@@ -1,5 +1,5 @@
 import  React, { Component } from 'react' 
-import { AppRegistry, Image } from 'react-native'
+import { Image, ScrollView } from 'react-native'
 
 export default class BananaImage extends Component {
     render() {
@@ -7,7 +7,13 @@ export default class BananaImage extends Component {
             uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
         }
         return (
+            <ScrollView
+                maximumZoomScale={1.00001}
+                minimumZoomScale={1}
+                bouncesZoom={true}
+            >
             <Image source={pic} style={{width: 193, height: 110}} />
+            </ScrollView>
         )
     }
 }
